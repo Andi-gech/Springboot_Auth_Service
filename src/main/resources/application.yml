@@ -1,0 +1,18 @@
+
+spring:
+  application:
+    name: hrs-service
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/Hr-system
+          jwk-set-uri: http://localhost:8080/realms/Hr-system/protocol/openid-connect/certs
+server:
+  port: 9090
+
